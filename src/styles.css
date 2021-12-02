@@ -6,6 +6,10 @@ body ul {
   list-style: none;
 }
 
+body p {
+  margin: 6px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +41,15 @@ body ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.details-container {
+  width: 100%;
+  margin: 0 20px;
+}
+
+.details-title {
+  border-bottom: 1px solid black;
 }
 
 .date {
@@ -80,15 +93,14 @@ body ul {
 }
 
 .grid {
-  margin: 0 auto;
-  width: 80%;
+  margin: 20px 20px 0 20px;
 }
 
 .grid-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 5fr 1fr 0.5fr 1fr 1fr;
-      grid-template-columns: 0.5fr 5fr 1fr 0.5fr 1fr 1fr;
+  -ms-grid-columns: 0.5fr 5fr 0.5fr 0.5fr 1.25fr 1.1fr;
+      grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr 1.25fr 1.1fr;
 }
 
 .grid-row:first-child {
@@ -102,6 +114,29 @@ body ul {
 }
 
 .total {
-  margin-left: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 20px;
+}
+
+.sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 150px 0 50px 0;
+}
+
+.sign-container {
+  border-top: 1px solid black;
 }
 /*# sourceMappingURL=styles.css.map */

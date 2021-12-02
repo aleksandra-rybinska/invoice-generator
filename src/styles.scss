@@ -3,6 +3,9 @@ body {
     ul {
         list-style: none;
     }
+    & p {
+        margin: 6px;
+    }
 }
 .nav {
     display: flex;
@@ -17,6 +20,13 @@ body {
 .details {
     display: flex;
     justify-content: space-around;
+    &-container {
+        width: 100%;
+        margin: 0 20px;
+    }
+    &-title {
+        border-bottom: 1px solid black;
+    }
 }
 .date {
     display: flex;
@@ -40,11 +50,10 @@ body {
     margin: 15px;
 }
 .grid {
-    margin: 0 auto;
-    width: 80%;
+    margin: 20px 20px 0 20px;
     &-row {
         display: grid;
-        grid-template-columns: 0.5fr 5fr 1fr 0.5fr 1fr 1fr;
+        grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr 1.25fr 1.1fr;
         &:first-child {
             background: #a8a8a8;
         }
@@ -56,5 +65,16 @@ body {
     }
 }
 .total {
-    margin-left: 700px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+.sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 150px 0 50px 0;
+    &-container {
+        border-top: 1px solid black;
+    }
 }

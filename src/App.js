@@ -9,6 +9,7 @@ import SellerDetails from './components/SellerDetails';
 import ClientDetails from './components/ClientDetails';
 import Notes from './components/Notes';
 import PaymentDetails from './components/PaymentDetails';
+import Sing from './components/Sing';
 
 function App() {
     const [showInvoice, setShowInvoice] = useState(false);
@@ -29,7 +30,7 @@ function App() {
                         <PaymentDetails />
                         <Notes />
                     </div>
-                    <p>podpis</p>
+                    <Sing />
                     <p>
                         Sprzedawca zwolniony podmiotowo z podatku od towarów i
                         usług [dostawa towarów lub świadczenie usług zwolnione

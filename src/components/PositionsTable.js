@@ -28,7 +28,7 @@ const PositionsTable = () => {
 
             {positionsList.map((item, index) => {
                 return (
-                    <div className='grid-row'>
+                    <div key={item.id} className='grid-row'>
                         <p>{index + 1}</p>
                         <p>{item.description}</p>
                         <p>{item.jm}</p>
@@ -38,7 +38,9 @@ const PositionsTable = () => {
                     </div>
                 );
             })}
-            <h2 className='total'>Razem do zapłaty:</h2>
+            <div className='total'>
+                <h2>Razem do zapłaty:{}</h2>
+            </div>
         </section>
     );
 };

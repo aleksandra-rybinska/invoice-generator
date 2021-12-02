@@ -1,7 +1,7 @@
 const SellerDetails = () => {
     return (
-        <div className='details-my'>
-            <h2>Sprzedawca</h2>
+        <div className='details-container'>
+            <h2 className='details-title'>Sprzedawca</h2>
             <p>"RJR" ROMAN RYBIŃSKI - usługi, produkcja i montaże</p>
             <p>ul. Michała Faradaya 54</p>
             <p>42-202 Częstochowa</p>
