@@ -6,12 +6,24 @@ const PositionsTable = () => {
     return (
         <section className='grid'>
             <div className='grid-row'>
-                <p>Lp.</p>
-                <p>Nazwa towaru lub usługi</p>
-                <p>Jm</p>
-                <p>Ilość</p>
-                <p>Cena jedn.</p>
-                <p>Wartość</p>
+                <p>
+                    <b>Lp.</b>
+                </p>
+                <p>
+                    <b>Nazwa towaru lub usługi</b>
+                </p>
+                <p>
+                    <b>Jm</b>
+                </p>
+                <p>
+                    <b>Ilość</b>
+                </p>
+                <p>
+                    <b>Cena jedn. w PLN</b>
+                </p>
+                <p>
+                    <b>Wartość w PLN</b>
+                </p>
             </div>
 
             {positionsList.map((item, index) => {
@@ -26,6 +38,7 @@ const PositionsTable = () => {
                     </div>
                 );
             })}
+            <h2 className='total'>Razem do zapłaty:</h2>
         </section>
     );
 };

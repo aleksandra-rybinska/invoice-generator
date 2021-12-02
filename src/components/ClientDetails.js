@@ -9,6 +9,7 @@ const ClientDetails = () => {
             <p>{invoiceData.clientName}</p>
             <p>{invoiceData.clientAddress1}</p>
             <p>{invoiceData.clientAddress2}</p>
+            <p>NIP:{invoiceData.clientNip}</p>
         </div>
     );
 };

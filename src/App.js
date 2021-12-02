@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import SellerDetails from './components/SellerDetails';
 import ClientDetails from './components/ClientDetails';
 import Notes from './components/Notes';
+import PaymentDetails from './components/PaymentDetails';
 
 function App() {
     const [showInvoice, setShowInvoice] = useState(false);
@@ -24,7 +25,18 @@ function App() {
                         <ClientDetails />
                     </section>
                     <PositionsTable />
-                    <Notes />
+                    <div className='details'>
+                        <PaymentDetails />
+                        <Notes />
+                    </div>
+                    <p>podpis</p>
+                    <p>
+                        Sprzedawca zwolniony podmiotowo z podatku od towarów i
+                        usług [dostawa towarów lub świadczenie usług zwolnione
+                        na podstawie art. 113 ust. 1(albo ust. 9) ustawy z dnia
+                        11.03.2004 r. o podatku od towarów i usług (Dz.U. z
+                        2016r. poz. 710, z późn. zm.)]
+                    </p>
                     <button onClick={toggleShowInvoice}>Edycja</button>
                 </div>
             ) : (
@@ -34,6 +46,7 @@ function App() {
                     <br />
                     <PositionsForm />
                     <PositionsTable />
+
                     <button onClick={toggleShowInvoice}>Podgląd</button>
                 </div>
             )}

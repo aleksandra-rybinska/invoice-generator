@@ -2,6 +2,7 @@ import { useInvoice } from '../AppContext';
 
 const InvoiceForm = () => {
     const { invoiceData, updateInvoiceData } = useInvoice();
+    console.log('invoiceData', invoiceData);
 
     return (
         <form className='form'>
@@ -70,12 +71,53 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
+                <label>NIP:</label>
+                <input
+                    type='text'
+                    id='text'
+                    name='clientNip'
+                    value={invoiceData.clientNip}
+                    placeholder='NIP klienta'
+                    onChange={updateInvoiceData}
+                />
+            </div>
+            <div className='form-row'>
                 <label>Uwagi</label>
                 <textarea
                     id='text'
                     name='notes'
                     placeholder='uwagi'
                     value={invoiceData.notes}
+                    onChange={updateInvoiceData}
+                />
+            </div>
+            <div className='form-row'>
+                <label>Słownie do zapłaty</label>
+                <input
+                    id='text'
+                    name='inWords'
+                    placeholder='słownie'
+                    value={invoiceData.inWords}
+                    onChange={updateInvoiceData}
+                />
+            </div>
+            <div className='form-row'>
+                <label>Sposób zapłaty</label>
+                <input
+                    id='text'
+                    name='payed'
+                    placeholder='sposób zapłaty'
+                    value={invoiceData.payed}
+                    onChange={updateInvoiceData}
+                />
+            </div>
+            <div className='form-row'>
+                <label>Data zapłaty</label>
+                <input
+                    type='date'
+                    id='text'
+                    name='payedDate'
+                    value={invoiceData.payedDate}
                     onChange={updateInvoiceData}
                 />
             </div>

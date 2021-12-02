@@ -1,6 +1,6 @@
 const Nav = () => {
     return (
-        <header className='header'>
+        <header className='nav'>
             <ul>
                 <li>
                     <button>Print</button>
