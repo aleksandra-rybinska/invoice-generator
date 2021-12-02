@@ -31,7 +31,7 @@ function App() {
                         <Notes />
                     </div>
                     <Sing />
-                    <p>
+                    <p className='annotation'>
                         Sprzedawca zwolniony podmiotowo z podatku od towarów i
                         usług [dostawa towarów lub świadczenie usług zwolnione
                         na podstawie art. 113 ust. 1(albo ust. 9) ustawy z dnia

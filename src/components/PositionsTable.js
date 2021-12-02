@@ -2,6 +2,9 @@ import { useInvoice } from '../AppContext';
 
 const PositionsTable = () => {
     const { positionsList } = useInvoice();
+    const totalAmount = positionsList
+        .reduce((acc, item) => acc + item.price * item.quantity, 0)
+        .toFixed(2);
 
     return (
         <section className='grid'>
@@ -39,7 +42,11 @@ const PositionsTable = () => {
                 );
             })}
             <div className='total'>
-                <h2>Razem do zapłaty:{}</h2>
+                <h2>
+                    Razem do zapłaty:&nbsp;&nbsp;
+                    {totalAmount}
+                    &nbsp;PLN
+                </h2>
             </div>
         </section>
     );

@@ -10,6 +10,10 @@ body p {
   margin: 6px;
 }
 
+body p.annotation {
+  padding-left: 20px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
