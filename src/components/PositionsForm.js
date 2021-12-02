@@ -1,6 +1,16 @@
-const PositionsForm = ({ addField }) => {
+import { useInvoice } from '../AppContext';
+
+const PositionsForm = () => {
+    const {
+        invoicePosition,
+        positionsList,
+        updateInvoicePosition,
+        updatePositionsList,
+    } = useInvoice();
+    // console.log('invoicePosition', invoicePosition);
+    console.log('positionsList', positionsList);
     return (
-        <form className='form' onSubmit={addField}>
+        <form className='form' onSubmit={updatePositionsList}>
             <div className='form-row'>
                 <label>Nazwa towaru / usługi</label>
                 <input
@@ -8,11 +18,20 @@ const PositionsForm = ({ addField }) => {
                     id='description'
                     name='description'
                     placeholder='nazwa usługi'
+                    value={invoicePosition.description}
+                    onChange={updateInvoicePosition}
                 />
             </div>
             <div className='form-row'>
                 <label>Jm</label>
-                <input type='text' id='jm' name='jm' placeholder='np. szt' />
+                <input
+                    type='text'
+                    id='jm'
+                    name='jm'
+                    placeholder='np. szt'
+                    value={invoicePosition.jm}
+                    onChange={updateInvoicePosition}
+                />
             </div>
             <div className='form-row'>
                 <label>Ilość</label>
@@ -21,6 +40,8 @@ const PositionsForm = ({ addField }) => {
                     id='quantity'
                     name='quantity'
                     placeholder='ilość'
+                    value={invoicePosition.quantity}
+                    onChange={updateInvoicePosition}
                 />
             </div>
             <div className='form-row'>
@@ -30,6 +51,8 @@ const PositionsForm = ({ addField }) => {
                     id='price'
                     name='price'
                     placeholder='cena jednostkowa'
+                    value={invoicePosition.price}
+                    onChange={updateInvoicePosition}
                 />
             </div>
             <button type='submit'>dodaj pozycję</button>

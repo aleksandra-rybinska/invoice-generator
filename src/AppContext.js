@@ -1,9 +1,26 @@
 import { createContext, useContext, useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
     const [invoiceData, setInvoiceData] = useLocalStorage('invoiceData', []);
+    const [invoicePosition, setInvoicePosition] = useLocalStorage(
+        'invoicePosition',
+        []
+    );
+
+    const [positionsList, setPositionsList] = useLocalStorage(
+        'positionsList',
+        []
+    );
+
+    const newPosition = {
+        id: uuidv4(),
+        description: invoicePosition.description,
+        jm: invoicePosition.jm,
+        quantity: invoicePosition.quantity,
+        price: invoicePosition.parice,
+    };
 
     const updateInvoiceData = (e) => {
         setInvoiceData({
@@ -12,9 +29,33 @@ export const AppProvider = ({ children }) => {
         });
     };
 
+    const updateInvoicePosition = (e) => {
+        setInvoicePosition({
+            ...invoicePosition,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const updatePositionsList = () => {
+        const newPosition = {
+            id: uuidv4(),
+            description: invoicePosition.description,
+            jm: invoicePosition.jm,
+            quantity: invoicePosition.quantity,
+            price: invoicePosition.parice,
+        };
+
+        setPositionsList([...positionsList, newPosition]);
+        setInvoicePosition([]);
+    };
+
     const value = {
-        invoiceData: invoiceData || [],
+        invoiceData,
         updateInvoiceData,
+        invoicePosition,
+        updateInvoicePosition,
+        updatePositionsList,
+        positionsList,
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

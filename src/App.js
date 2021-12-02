@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import './App.css';
+import './styles.css';
 import InvoiceDetails from './components/InvoiceDetails';
 import PositionsForm from './components/PositionsForm';
 import InvoiceForm from './components/InvoiceForm';
+import PositionsTable from './components/PositionsTable';
 
 function App() {
     const [showInvoice, setShowInvoice] = useState(false);
@@ -13,6 +14,7 @@ function App() {
             {showInvoice ? (
                 <div>
                     <InvoiceDetails />
+                    <PositionsTable />
                     <button onClick={toggleShowInvoice}>Edycja</button>
                 </div>
             ) : (
@@ -21,6 +23,7 @@ function App() {
                     <br />
                     <br />
                     <PositionsForm />
+                    <PositionsTable />
                     <button onClick={toggleShowInvoice}>Podgląd</button>
                 </div>
             )}

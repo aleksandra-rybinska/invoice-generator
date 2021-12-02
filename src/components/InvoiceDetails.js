@@ -17,15 +17,12 @@ const InvoiceDetails = () => {
                 </li>
                 <li>
                     <p>
-                        Wystawiona w dniu: &nbsp;
-                        {/* {invDate} */}, Częstochowa
+                        Wystawiona w dniu: &nbsp;{invoiceData.invDate},
+                        Częstochowa
                     </p>
                 </li>
                 <li>
-                    <p>
-                        Data zakończenia usługi: &nbsp;
-                        {/* {servDate} */}
-                    </p>
+                    <p>Data zakończenia usługi: &nbsp;{invoiceData.endDate}</p>
                 </li>
             </ul>
         </section>
