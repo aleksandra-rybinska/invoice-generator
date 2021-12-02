@@ -36,15 +36,15 @@ const InvoiceForm = () => {
                     onChange={updateInvoiceData}
                 />
             </div>
-            {/* <div className='form-row'>
+            <div className='form-row'>
                 <label>Nazwa klienta</label>
                 <input
                     type='text'
                     id='text'
                     name='clientName'
-                    value={data.clientName}
+                    value={invoiceData.clientName}
                     placeholder='nazwa firmy'
-                    onChange={updateField}
+                    onChange={updateInvoiceData}
                 />
             </div>
             <div className='form-row'>
@@ -53,9 +53,9 @@ const InvoiceForm = () => {
                     type='text'
                     id='text'
                     name='clientAddress1'
-                    value={data.clientAddress1 ? data.clientAddress1 : null}
+                    value={invoiceData.clientAddress1}
                     placeholder='ulica'
-                    onChange={updateField}
+                    onChange={updateInvoiceData}
                 />
             </div>
             <div className='form-row'>
@@ -64,21 +64,21 @@ const InvoiceForm = () => {
                     type='text'
                     id='text'
                     name='clientAddress2'
-                    value={data.clientAddress2 ? data.clientAddress2 : null}
+                    value={invoiceData.clientAddress2}
                     placeholder='kod pocztowy i miejscowość'
-                    onChange={updateField}
+                    onChange={updateInvoiceData}
                 />
-            </div> */}
-            {/* <div className='form-row'>
+            </div>
+            <div className='form-row'>
                 <label>Uwagi</label>
                 <textarea
                     id='text'
                     name='notes'
                     placeholder='uwagi'
-                    value={data.notes ? data.notes : null}
-                    onChange={updateField}
+                    value={invoiceData.notes}
+                    onChange={updateInvoiceData}
                 />
-            </div> */}
+            </div>
         </form>
     );
 };

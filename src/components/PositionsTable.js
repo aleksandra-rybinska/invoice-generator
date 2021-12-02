@@ -1,12 +1,7 @@
-import { parse } from 'uuid';
 import { useInvoice } from '../AppContext';
 
 const PositionsTable = () => {
-    const { invoicePosition, positionsList } = useInvoice();
-    const calculateAmount = (price, ammount) => {
-        const sum = price * ammount;
-        return sum.toFixed(2);
-    };
+    const { positionsList } = useInvoice();
 
     return (
         <section className='grid'>
@@ -27,13 +22,7 @@ const PositionsTable = () => {
                         <p>{item.jm}</p>
                         <p>{item.quantity}</p>
                         <p>{item.price}</p>
-                        <p>
-                            {item.amount}
-                            {/* {calculateAmount(
-                                parseFloat(item.price),
-                                parseFloat(item.quantity)
-                            )} */}
-                        </p>
+                        <p>{item.amount}</p>
                     </div>
                 );
             })}
