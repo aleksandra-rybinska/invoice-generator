@@ -14,14 +14,6 @@ export const AppProvider = ({ children }) => {
         []
     );
 
-    const newPosition = {
-        id: uuidv4(),
-        description: invoicePosition.description,
-        jm: invoicePosition.jm,
-        quantity: invoicePosition.quantity,
-        price: invoicePosition.parice,
-    };
-
     const updateInvoiceData = (e) => {
         setInvoiceData({
             ...invoiceData,
@@ -42,7 +34,8 @@ export const AppProvider = ({ children }) => {
             description: invoicePosition.description,
             jm: invoicePosition.jm,
             quantity: invoicePosition.quantity,
-            price: invoicePosition.parice,
+            price: invoicePosition.price,
+            amount: invoicePosition.amount,
         };
 
         setPositionsList([...positionsList, newPosition]);
@@ -56,6 +49,7 @@ export const AppProvider = ({ children }) => {
         updateInvoicePosition,
         updatePositionsList,
         positionsList,
+        setInvoicePosition,
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
