@@ -14,7 +14,7 @@ body button {
   padding: 10px 20px;
   color: white;
   font-size: 16px;
-  background: #971111;
+  background: #090844;
   border: none;
   border-radius: 25px;
   -webkit-box-shadow: 1px 1px 3px black;
@@ -26,8 +26,8 @@ body button {
   margin: 0 10px;
 }
 
-.menu > button:first-of-type {
-  background: #090844;
+.menu > button:last-of-type {
+  background: #971111;
 }
 
 .details {
@@ -90,7 +90,7 @@ body button {
   margin: 15px;
   padding: 20px 0;
   width: 100%;
-  background: radial-gradient(circle at -33% 254%, #6c657a, #5d6377, #2f2f59, #537e6c, #a0bfb2);
+  background: radial-gradient(circle at -33% 185%, #7c858c, #c8d5ff, #a6e2c8, #7c8c85);
   border-radius: 40px;
   -webkit-box-shadow: 2px 3px 11px -4px #42445a;
   box-shadow: 2px 3px 11px -4px #42445a;
@@ -106,7 +106,7 @@ body button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
+  color: black;
 }
 
 .form-row > label {
@@ -149,6 +149,22 @@ body button {
   color: white;
 }
 
+.form-annotation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 25px;
+  text-align: center;
+  color: #971111;
+}
+
 .form-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,15 +175,15 @@ body button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70%;
+  height: 37%;
 }
 
 .form-button-container > button {
   height: 38px;
 }
 
-.form-button-container > button:first-of-type {
-  background: #090844;
+.form-button-container > button:last-of-type {
+  background: #971111;
 }
 
 .grid {
@@ -225,5 +241,9 @@ body button {
 .wrapper {
   width: 90vw;
   margin: 0 auto;
+}
+
+.ml {
+  margin-left: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

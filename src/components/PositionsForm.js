@@ -62,7 +62,7 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Ilość:</label>
+                <label>Ilość *:</label>
                 <input
                     type='text'
                     id='quantity'
@@ -73,7 +73,7 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Cena jednostkowa:</label>
+                <label>Cena jednostkowa *:</label>
                 <input
                     type='text'
                     id='price'
@@ -91,6 +91,13 @@ const PositionsForm = () => {
                         : ''}
                     &nbsp;PLN
                 </p>
+            </div>
+            <div className='form-annotation'>
+                <h4>
+                    * Wpisując wartości dziesiętne należy użyć KROPKI zamiast
+                    przecinka
+                    <br /> (np. 1.99)
+                </h4>
             </div>
             <div className='form-button-container'>
                 <button type='submit'>DODAJ POZYCJĘ</button>

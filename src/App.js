@@ -33,9 +33,12 @@ function App() {
                         <InvoiceForm />
                         <PositionsForm />
                     </section>
+                    <h3 className='ml'>Podgląd pozycji na fakturze:</h3>
                     <PositionsTable />
 
-                    <button onClick={toggleShowInvoice}>Podgląd</button>
+                    <button className='ml' onClick={toggleShowInvoice}>
+                        PODGLĄD FAKTURY
+                    </button>
                 </div>
             )}
         </>
