@@ -6,8 +6,13 @@ body ul {
   list-style: none;
 }
 
+body h2 {
+  font-size: 20px;
+}
+
 body p {
   margin: 6px;
+  font-size: 14px;
 }
 
 body button {
@@ -47,6 +52,10 @@ body button {
   border-bottom: 1px solid black;
 }
 
+.details p {
+  font-size: 16px;
+}
+
 .payments {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,6 +77,10 @@ body button {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: 20px;
+}
+
+.date p {
+  font-size: 16px;
 }
 
 .notes {
@@ -236,6 +249,7 @@ body button {
 
 .annotation {
   padding-left: 14px;
+  font-size: 12px;
 }
 
 .wrapper {

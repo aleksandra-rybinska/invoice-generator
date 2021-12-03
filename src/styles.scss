@@ -5,8 +5,12 @@ body {
     ul {
         list-style: none;
     }
+    h2 {
+        font-size: 20px;
+    }
     & p {
         margin: 6px;
+        font-size: 14px;
     }
     & button {
         padding: 10px 20px;
@@ -37,6 +41,9 @@ body {
     &-title {
         border-bottom: 1px solid black;
     }
+    & p {
+        font-size: 16px;
+    }
 }
 .payments {
     display: flex;
@@ -49,6 +56,9 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-right: 20px;
+    & p {
+        font-size: 16px;
+    }
 }
 .notes {
     display: flex;
@@ -156,6 +166,7 @@ body {
 }
 .annotation {
     padding-left: 14px;
+    font-size: 12px;
 }
 .wrapper {
     width: 90vw;
