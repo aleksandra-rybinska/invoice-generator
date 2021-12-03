@@ -2,7 +2,6 @@ import { useInvoice } from '../AppContext';
 
 const InvoiceDetails = () => {
     const { invoiceData } = useInvoice();
-    console.log('invoiceData', invoiceData);
     return (
         <section className='date'>
             <ul>

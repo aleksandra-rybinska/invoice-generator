@@ -8,9 +8,8 @@ const PositionsForm = () => {
         updateInvoicePosition,
         updatePositionsList,
         setInvoicePosition,
+        setPositionsList,
     } = useInvoice();
-    // console.log('invoicePosition', invoicePosition);
-    console.log('positionsList', positionsList);
 
     useEffect(() => {
         const calculateAmount = (amount) => {
@@ -34,10 +33,16 @@ const PositionsForm = () => {
         return /^-?[\d.]+(?:e-?\d+)?$/.test(n);
     }
 
+    const handleDelete = () => {
+        let keysToRemove = ['invoicePosition', 'positionsList'];
+        keysToRemove.forEach((k) => localStorage.removeItem(k));
+        window.location.reload();
+    };
+
     return (
         <form className='form' onSubmit={updatePositionsList}>
             <div className='form-row'>
-                <label>Nazwa towaru / usługi</label>
+                <label>Nazwa towaru / usługi:</label>
                 <input
                     type='text'
                     id='description'
@@ -48,7 +53,7 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Jm</label>
+                <label>Jm:</label>
                 <input
                     type='text'
                     id='jm'
@@ -59,7 +64,7 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Ilość</label>
+                <label>Ilość:</label>
                 <input
                     type='text'
                     id='quantity'
@@ -70,7 +75,7 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Cena jednostkowa</label>
+                <label>Cena jednostkowa:</label>
                 <input
                     type='text'
                     id='price'
@@ -81,15 +86,20 @@ const PositionsForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Wartość</label>
+                <label>Wartość:</label>
                 <p>
                     {isNumber(invoicePosition.amount)
                         ? invoicePosition.amount
                         : ''}
+                    &nbsp;PLN
                 </p>
             </div>
-
-            <button type='submit'>dodaj pozycję</button>
+            <div className='form-button-container'>
+                <button type='submit'>DODAJ POZYCJĘ</button>
+                <button type='reset' onClick={handleDelete}>
+                    USUŃ WSZYSTKIE POZYCJE
+                </button>
+            </div>
         </form>
     );
 };

@@ -2,12 +2,11 @@ import { useInvoice } from '../AppContext';
 
 const InvoiceForm = () => {
     const { invoiceData, updateInvoiceData } = useInvoice();
-    console.log('invoiceData', invoiceData);
 
     return (
         <form className='form'>
             <div className='form-row'>
-                <label>Numer faktury</label>
+                <label>Numer faktury:</label>
                 <input
                     type='text'
                     id='text'
@@ -18,7 +17,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Data wystawienia</label>
+                <label>Data wystawienia:</label>
                 <input
                     type='date'
                     id='text'
@@ -28,7 +27,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Data zakończenia usługi</label>
+                <label>Data zakończenia usługi:</label>
                 <input
                     type='date'
                     id='text'
@@ -38,7 +37,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Nazwa klienta</label>
+                <label>Nazwa klienta:</label>
                 <input
                     type='text'
                     id='text'
@@ -49,7 +48,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Adres klienta - ulica</label>
+                <label>Adres klienta - ulica i nr:</label>
                 <input
                     type='text'
                     id='text'
@@ -60,7 +59,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Kod pocztowy i miejscowość</label>
+                <label>Kod pocztowy i miejscowość:</label>
                 <input
                     type='text'
                     id='text'
@@ -82,17 +81,18 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Uwagi</label>
+                <label>Uwagi:</label>
                 <textarea
                     id='text'
                     name='notes'
                     placeholder='uwagi'
+                    rows='7'
                     value={invoiceData.notes}
                     onChange={updateInvoiceData}
                 />
             </div>
             <div className='form-row'>
-                <label>Słownie do zapłaty</label>
+                <label>Słownie do zapłaty:</label>
                 <input
                     id='text'
                     name='inWords'
@@ -102,7 +102,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Sposób zapłaty</label>
+                <label>Sposób zapłaty:</label>
                 <input
                     id='text'
                     name='payed'
@@ -112,7 +112,7 @@ const InvoiceForm = () => {
                 />
             </div>
             <div className='form-row'>
-                <label>Data zapłaty</label>
+                <label>Data zapłaty:</label>
                 <input
                     type='date'
                     id='text'

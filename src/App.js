@@ -4,7 +4,6 @@ import InvoiceDetails from './components/InvoiceDetails';
 import PositionsForm from './components/PositionsForm';
 import InvoiceForm from './components/InvoiceForm';
 import PositionsTable from './components/PositionsTable';
-import Nav from './components/Nav';
 import SellerDetails from './components/SellerDetails';
 import ClientDetails from './components/ClientDetails';
 import Notes from './components/Notes';
@@ -19,7 +18,12 @@ function App() {
         <>
             {showInvoice ? (
                 <div>
-                    <Nav />
+                    <menu className='menu'>
+                        <button onClick={toggleShowInvoice}>
+                            WRÓĆ DO EDYCJI
+                        </button>
+                        <button>DRUKUJ</button>
+                    </menu>
                     <InvoiceDetails />
                     <section className='details'>
                         <SellerDetails />
@@ -38,14 +42,13 @@ function App() {
                         11.03.2004 r. o podatku od towarów i usług (Dz.U. z
                         2016r. poz. 710, z późn. zm.)]
                     </p>
-                    <button onClick={toggleShowInvoice}>Edycja</button>
                 </div>
             ) : (
-                <div>
-                    <InvoiceForm />
-                    <br />
-                    <br />
-                    <PositionsForm />
+                <div className='wrapper'>
+                    <section className='form-section'>
+                        <InvoiceForm />
+                        <PositionsForm />
+                    </section>
                     <PositionsTable />
 
                     <button onClick={toggleShowInvoice}>Podgląd</button>
