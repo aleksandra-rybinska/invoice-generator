@@ -4,11 +4,9 @@ import { useInvoice } from '../AppContext';
 const PositionsForm = () => {
     const {
         invoicePosition,
-        positionsList,
         updateInvoicePosition,
         updatePositionsList,
         setInvoicePosition,
-        setPositionsList,
     } = useInvoice();
 
     useEffect(() => {

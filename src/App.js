@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import React, { useState, useRef, forwardRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 import './styles.css';
-import InvoiceDetails from './components/InvoiceDetails';
 import PositionsForm from './components/PositionsForm';
 import InvoiceForm from './components/InvoiceForm';
 import PositionsTable from './components/PositionsTable';
-import SellerDetails from './components/SellerDetails';
-import ClientDetails from './components/ClientDetails';
-import Notes from './components/Notes';
-import PaymentDetails from './components/PaymentDetails';
-import Sing from './components/Sing';
+import { ComponentToPrint } from './components/ComponentToPrint';
 
 function App() {
     const [showInvoice, setShowInvoice] = useState(false);
     const toggleShowInvoice = () => setShowInvoice(!showInvoice);
+
+    const componentRef = useRef();
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+    });
 
     return (
         <>
@@ -22,26 +23,9 @@ function App() {
                         <button onClick={toggleShowInvoice}>
                             WRÓĆ DO EDYCJI
                         </button>
-                        <button>DRUKUJ</button>
+                        <button onClick={handlePrint}>DRUKUJ</button>
                     </menu>
-                    <InvoiceDetails />
-                    <section className='details'>
-                        <SellerDetails />
-                        <ClientDetails />
-                    </section>
-                    <PositionsTable />
-                    <div className='details'>
-                        <PaymentDetails />
-                        <Notes />
-                    </div>
-                    <Sing />
-                    <p className='annotation'>
-                        Sprzedawca zwolniony podmiotowo z podatku od towarów i
-                        usług [dostawa towarów lub świadczenie usług zwolnione
-                        na podstawie art. 113 ust. 1(albo ust. 9) ustawy z dnia
-                        11.03.2004 r. o podatku od towarów i usług (Dz.U. z
-                        2016r. poz. 710, z późn. zm.)]
-                    </p>
+                    <ComponentToPrint ref={componentRef} />
                 </div>
             ) : (
                 <div className='wrapper'>

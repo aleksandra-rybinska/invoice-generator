@@ -47,6 +47,19 @@ body button {
   border-bottom: 1px solid black;
 }
 
+.payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.payments-container {
+  margin-left: 20px;
+}
+
 .date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +90,7 @@ body button {
   margin: 15px;
   padding: 20px 0;
   width: 100%;
-  background: radial-gradient(circle at -33% 254%, #1f005c, #1f327a, #47498f, #217250, #2e8d65);
+  background: radial-gradient(circle at -33% 254%, #6c657a, #5d6377, #2f2f59, #537e6c, #a0bfb2);
   border-radius: 40px;
   -webkit-box-shadow: 2px 3px 11px -4px #42445a;
   box-shadow: 2px 3px 11px -4px #42445a;
