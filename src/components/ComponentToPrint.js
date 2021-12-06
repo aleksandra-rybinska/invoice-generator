@@ -9,7 +9,7 @@ import PositionsTable from './PositionsTable';
 
 export const ComponentToPrint = React.forwardRef((props, ref) => {
     return (
-        <div ref={ref}>
+        <div ref={ref} className='print'>
             <InvoiceDetails />
             <section className='details'>
                 <SellerDetails />

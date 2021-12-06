@@ -18,7 +18,7 @@ function App() {
     return (
         <>
             {showInvoice ? (
-                <div>
+                <div className='flex'>
                     <menu className='menu'>
                         <button onClick={toggleShowInvoice}>
                             WRÓĆ DO EDYCJI
