@@ -15,6 +15,7 @@ const SellerSwitch = () => {
             type="radio"
             name="seller"
             value="roman"
+            id="roman"
             checked={seller === "roman"}
             onChange={() => handleSellerChange("roman")}
           />
@@ -25,6 +26,7 @@ const SellerSwitch = () => {
             type="radio"
             name="seller"
             value="jolanta"
+            id="jolanta"
             checked={seller === "jolanta"}
             onChange={() => handleSellerChange("jolanta")}
           />
