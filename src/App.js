@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-import "./styles.css";
+import "./styles.scss";
 import PositionsForm from "./components/PositionsForm";
 import InvoiceForm from "./components/InvoiceForm";
 import PositionsTable from "./components/PositionsTable";

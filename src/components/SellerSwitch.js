@@ -18,7 +18,7 @@ const SellerSwitch = () => {
             checked={seller === "roman"}
             onChange={() => handleSellerChange("roman")}
           />
-          <label htmlFor="roman">ROMAN</label>
+          <label htmlFor="roman">Roman</label>
         </span>
         <span>
           <input
